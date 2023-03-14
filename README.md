@@ -3,7 +3,7 @@
 ## Get copy of this repo
 
 ```console
-clone https://github.com/pkdone/dotfiles.git
+git clone https://github.com/pkdone/dotfiles.git
 ```
 
 ## Restore dotfiles
