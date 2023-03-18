@@ -50,6 +50,9 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 exit
+```
+
+```console
 docker run hello-world
 docker ps -a
 ```
@@ -71,7 +74,7 @@ else
   echo "debian"
   #echo "deb http://repo.mongodb.com/apt/debian bullseye/mongodb-enterprise/6.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
 fi
-apt-get update
+sudo apt-get update
 sudo apt-get install -y mongodb-enterprise
 ```
 
