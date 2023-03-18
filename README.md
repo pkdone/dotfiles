@@ -75,7 +75,7 @@ fi
 sudo apt-get update
 sudo apt-get install -y mongodb-enterprise
 mkdir -p ~/db/data
-cat > db/mongod_local.conf <<EOF
+cat > ~/db/mongod_local.conf <<EOF
 storage:
     dbPath: "$HOME/db/data"
     journal:
@@ -92,7 +92,7 @@ net:
 #security:
 #    authorization: enabled
 EOF
-mongod -f db/mongod_local.conf
+mongod -f ~/db/mongod_local.conf
 ```
 
 ## Clean Up
