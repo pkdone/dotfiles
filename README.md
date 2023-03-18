@@ -34,6 +34,18 @@ rm packages.microsoft.gpg
 # Turn on sync settings in VS Code using GitHub id
 ```
 
+## Install Docker
+
+```console
+sudo apt install -y docker.io docker-compose
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+su - $USER
+docker run hello-world
+docker ps -a
+```
+
 ## Clean Up
 
 ```console
