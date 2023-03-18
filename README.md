@@ -46,6 +46,13 @@ docker run hello-world
 docker ps -a
 ```
 
+## Installl Node.js
+
+```console
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt install nodejs
+```
+
 ## Clean Up
 
 ```console
