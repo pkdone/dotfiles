@@ -30,6 +30,7 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microso
 sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code # or code-insiders
+rm packages.microsoft.gpg
 # Turn on sync settings in VS Code
 ```
 
