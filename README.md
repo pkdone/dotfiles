@@ -82,7 +82,7 @@ storage:
         enabled: true
 systemLog:
     destination: file
-    path: "/home/pdone/db/data/mongodb.log"
+    path: "$HOME/db/data/mongodb.log"
     logAppend: true
 processManagement:
     fork: true
