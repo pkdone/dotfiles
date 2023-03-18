@@ -74,6 +74,25 @@ else
 fi
 sudo apt-get update
 sudo apt-get install -y mongodb-enterprise
+mkdir -p ~/db/data
+cat > db/mongod_local.conf <<EOF
+storage:
+    dbPath: "$HOME/db/data"
+    journal:
+        enabled: true
+systemLog:
+    destination: file
+    path: "/home/pdone/db/data/mongodb.log"
+    logAppend: true
+processManagement:
+    fork: true
+net:
+    bindIp: 0.0.0.0
+    port: 27017
+#security:
+#    authorization: enabled
+EOF
+mongod -f db/mongod_local.conf
 ```
 
 ## Clean Up
