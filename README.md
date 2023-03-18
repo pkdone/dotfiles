@@ -29,19 +29,6 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 ```
 
-## Install VS Code
-
-```console
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install -y apt-transport-https
-sudo apt-get update
-sudo apt-get install -y code # or code-insiders
-rm packages.microsoft.gpg
-# Turn on sync settings in VS Code using GitHub id
-```
-
 ## Install Docker
 
 ```console
@@ -93,6 +80,19 @@ net:
 #    authorization: enabled
 EOF
 mongod -f ~/db/mongod_local.conf
+```
+
+## Install VS Code
+
+```console
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get install -y apt-transport-https
+sudo apt-get update
+sudo apt-get install -y code # or code-insiders
+rm packages.microsoft.gpg
+# Turn on sync settings in VS Code using GitHub id
 ```
 
 ## Clean Up
