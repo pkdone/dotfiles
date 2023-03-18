@@ -9,7 +9,7 @@ git clone https://github.com/pkdone/dotfiles.git
 ## Initialise System
 
 ```console
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt -y upgrade
 cp dotfiles/.bash_aliases ~/
 exit
 ```
