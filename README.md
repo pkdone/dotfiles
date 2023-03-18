@@ -94,7 +94,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code # or code-insiders
 rm -f packages.microsoft.gpg
-# Turn on sync settings in VS Code using GitHub id
+# Turn on sync settings in VS Code using GitHub ID
 ```
 
 ## Clean Up
