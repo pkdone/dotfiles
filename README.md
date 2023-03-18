@@ -11,14 +11,12 @@ git clone https://github.com/pkdone/dotfiles.git
 ```console
 sudo apt update && sudo apt -y upgrade
 cp dotfiles/.bash_aliases ~/
-exit
-```
-
-## If On Chromebook Linux, Reset Password
-
-```console
-sudo su
-# passwd <username>
+if uname -n | grep -q "penguin"; then
+  "On Chromebook, password not known so instead need to log out of terminal and back in again"
+  exit
+else
+  su - $USER
+fi
 ```
 
 ## Install Google Chrome
@@ -36,7 +34,11 @@ sudo apt install -y docker.io docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
-exit
+if uname -n | grep -q "penguin"; then
+  printf "\nACTION: On Chromebook, password not known so instead restart the Linux VM by first right-clicking 'Terminal' app and choosing to 'Shut down Linux'\n\n"
+else
+  su - $USER
+fi
 ```
 
 ```console
