@@ -24,7 +24,7 @@ fi
 ```console
 curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+rm -f google-chrome-stable_current_amd64.deb
 ```
 
 ## Install Docker
@@ -93,7 +93,7 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microso
 sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code # or code-insiders
-rm packages.microsoft.gpg
+rm -f packages.microsoft.gpg
 # Turn on sync settings in VS Code using GitHub id
 ```
 
