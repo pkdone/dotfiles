@@ -12,7 +12,7 @@ git clone https://github.com/pkdone/dotfiles.git
 sudo apt update && sudo apt -y upgrade
 cp dotfiles/.bash_aliases ~/
 if uname -n | grep -q "penguin"; then
-  "On Chromebook, password not known so instead need to log out of terminal and back in again"
+  # On Chromebook, password not known so instead need to log out of terminal and back in again
   exit
 else
   su - $USER
