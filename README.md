@@ -11,6 +11,7 @@ git clone https://github.com/pkdone/dotfiles.git
 ```console
 sudo apt update && sudo apt upgrade
 cp dotfiles/.bash_aliases ~/
+exit
 ```
 
 ## If On Chromebook Linux, Reset Password
@@ -48,7 +49,7 @@ sudo apt install -y docker.io docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
-su - $USER
+exit
 docker run hello-world
 docker ps -a
 ```
