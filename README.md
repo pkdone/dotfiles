@@ -13,6 +13,13 @@ sudo apt update && sudo apt upgrade
 cp dotfiles/.bash_aliases ~/
 ```
 
+## If On Chromebook Linux, Reset Password
+
+```console
+sudo su
+# passwd <username>
+```
+
 ## Install Google Chrome
 
 ```console
