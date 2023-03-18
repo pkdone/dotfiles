@@ -1,18 +1,25 @@
 # Linux Env Setup
 
-## Get copy of this repo
+## Copy Repo
 
 ```console
 git clone https://github.com/pkdone/dotfiles.git
 ```
 
-## Restore dotfiles
+## Restore Dotfiles
 
 ```console
 cp dotfiles/.bash_aliases ~/
 ```
 
-## Clean up
+## Install Google Chrome
+
+```console
+curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+```
+
+## Clean Up
 
 ```console
 rm -rf dotfiles
