@@ -1,5 +1,7 @@
 # Debian/Ubuntu Linux Environment Setup
 
+For Ubuntu laptop, [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers), [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), and Chromebook.
+
 ## Copy Repo
 
 ```console
