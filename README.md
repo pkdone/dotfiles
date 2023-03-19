@@ -38,7 +38,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 if uname -n | grep -q "penguin"; then
-  printf "\nACTION: On Chromebook, password not known so instead restart the Linux VM by first right-clicking 'Terminal' app and choosing to 'Shut down Linux'\n\n"
+  printf "\nACTION: On Chromebook, password not known so instead restart the Linux VM by first right-clicking the 'Terminal' app and choosing to 'Shut down Linux'\n\n"
 else
   su - $USER
 fi
