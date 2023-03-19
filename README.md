@@ -6,11 +6,11 @@
 git clone https://github.com/pkdone/dotfiles.git
 ```
 
-## Initialise System
+## Set Up Shell Aliases
 
 ```console
-sudo apt update && sudo apt -y upgrade
 cp dotfiles/.bash_aliases ~/
+
 if uname -n | grep -q "penguin"; then
   # On Chromebook, password not known so instead need to log out of terminal and back in again
   exit
