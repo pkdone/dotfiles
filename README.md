@@ -34,6 +34,7 @@ sudo apt install -y docker.io docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
+
 if uname -n | grep -q "penguin"; then
   printf "\nACTION: On Chromebook, password not known so instead restart the Linux VM by first right-clicking 'Terminal' app and choosing to 'Shut down Linux'\n\n"
 else
@@ -56,11 +57,13 @@ sudo apt install nodejs
 ## Install MongoDB Enterprise
 ```console
 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+
 if cat /etc/issue | grep -q "Ubuntu"; then
   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 else
   echo "deb http://repo.mongodb.com/apt/debian bullseye/mongodb-enterprise/6.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
 fi
+
 sudo apt-get update
 sudo apt-get install -y mongodb-enterprise
 mkdir -p ~/db/data
