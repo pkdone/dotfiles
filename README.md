@@ -73,8 +73,8 @@ mkdir -p ~/db/data
 cat > ~/db/mongod_local.conf <<EOF
 storage:
     dbPath: "$HOME/db/data"
-    journal:
-        enabled: true
+    #journal:
+    #    enabled: true
 systemLog:
     destination: file
     path: "$HOME/db/data/mongodb.log"
