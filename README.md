@@ -58,12 +58,12 @@ sudo apt install nodejs
 
 ## Install MongoDB Enterprise
 ```console
-wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -
 
 if cat /etc/issue | grep -q "Ubuntu"; then
-  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.com/apt/ubuntu jammy/mongodb-enterprise/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
 else
-  echo "deb http://repo.mongodb.com/apt/debian bullseye/mongodb-enterprise/6.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
+  echo "deb http://repo.mongodb.com/apt/debian bullseye/mongodb-enterprise/7.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
 fi
 
 sudo apt-get update
@@ -101,7 +101,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code
 rm -f packages.microsoft.gpg
-# Turn on sync settings in VS Code using GitHub ID
+echo "Start VS Code and enable sync settings using your GitHub ID"
 ```
 
 ## Clean Up
