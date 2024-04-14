@@ -1,6 +1,6 @@
 # Debian/Ubuntu Linux Environment Setup
 
-For Ubuntu laptop, [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers), [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), and Chromebook.
+For Ubuntu laptops, [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers), [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), and Chromebook.
 
 ## Copy Repo
 
@@ -38,7 +38,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 if uname -n | grep -q "penguin"; then
-  printf "\nACTION: On Chromebook, the user's password is not known, so you must completely sign out of ChromeOS and then sign back in again\n\n"
+  printf "\nACTION: On Chromebook, the user's password is not known, so right-click (Super-<mouse-click>) and select 'Shut down Linux' and then restart Linux again\n\n"
 else
   su - $USER
 fi
@@ -49,7 +49,7 @@ docker run hello-world
 docker ps -a
 ```
 
-## Installl Node.js
+## Install Node.js
 
 ```console
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
