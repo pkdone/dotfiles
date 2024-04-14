@@ -14,7 +14,7 @@ git clone https://github.com/pkdone/dotfiles.git
 cp dotfiles/.bash_aliases ~/
 
 if uname -n | grep -q "penguin"; then
-  # On Chromebook, password not known so instead need to log out of terminal and back in again
+  # On Chromebook, password not known so instead, need to log out of the terminal and back in again
   exit
 else
   su - $USER
@@ -38,7 +38,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 if uname -n | grep -q "penguin"; then
-  printf "\nACTION: On Chromebook, password not known so instead restart the Linux VM by first right-clicking the 'Terminal' app and choosing to 'Shut down Linux'\n\n"
+  printf "\nACTION: On Chromebook, the user's password is not known, so you must completely sign out of ChromeOS and then sign back in again\n\n"
 else
   su - $USER
 fi
