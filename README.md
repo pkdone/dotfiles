@@ -49,11 +49,12 @@ docker run hello-world
 docker ps -a
 ```
 
-## Install Node.js
+## Install Node.js & TypeScript
 
 ```console
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt install nodejs
+npm install -g typescript
 ```
 
 ## Install MongoDB Enterprise
