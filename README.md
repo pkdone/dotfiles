@@ -54,7 +54,7 @@ docker ps -a
 ```console
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt install nodejs
-npm install -g typescript
+sudo npm install -g typescript
 ```
 
 ## Install MongoDB Enterprise
