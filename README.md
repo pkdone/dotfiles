@@ -32,7 +32,7 @@ rm -f google-chrome-stable_current_amd64.deb
 ## Install Docker
 
 ```console
-sudo apt install -y docker.io docker-compose
+sudo apt install -y docker.io docker-compose-v2
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
