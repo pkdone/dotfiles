@@ -32,14 +32,16 @@ rm -f google-chrome-stable_current_amd64.deb
 ## Install Docker
 
 ```console
-sudo apt install -y docker.io docker-compose-v2
+sudo apt install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 if uname -n | grep -q "penguin"; then
-  printf "\nACTION: On Chromebook, the user's password is not known, so right-click (Super-<mouse-click>) and select 'Shut down Linux' and then restart Linux again\n\n"
+  sudo apt install -y docker-compose
+  printf "\nACTION: On Chromebook, the user's password is not known, so right-click (Super-<mouse-click>) the terminal's icon and select 'Shut down Linux' and then start Linux again\n\n"
 else
+  sudo apt install -y docker-compose-v2
   su - $USER
 fi
 ```
@@ -59,6 +61,8 @@ sudo npm install -g typescript
 
 ## Install MongoDB Enterprise
 ```console
+sudo apt install -y gnupg curl
+
 curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
