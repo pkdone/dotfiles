@@ -1,3 +1,4 @@
+set -g fish_greeting ""
 alias rm 'rm -i'
 alias mv 'mv -i'
 alias pycodestyle 'pycodestyle --max-line-length=100'
