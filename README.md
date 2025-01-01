@@ -11,7 +11,8 @@ git clone https://github.com/pkdone/dotfiles.git
 ## Set Up Shell Aliases
 
 ```console
-cp dotfiles/.bash_aliases ~/
+cp dotfiles/bash_aliases ~/.bash_aliases
+cp dotfiles/config.fish ~/.config/fish/config.fish
 
 if uname -n | grep -q "penguin"; then
   # On Chromebook, password not known so instead, need to log out of the terminal and back in again
