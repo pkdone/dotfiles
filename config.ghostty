@@ -1,0 +1,36 @@
+shell-integration-features = no-cursor
+cursor-style = bar
+cursor-style-blink = false
+mouse-hide-while-typing = true
+window-height = 60
+window-width = 90
+unfocused-split-opacity = 0.75
+unfocused-split-fill = #000000
+keybind = super+w=toggle_window_decorations
+keybind = super+ctrl+p=new_split:right
+keybind = super+ctrl+o=new_split:down
+keybind = super+ctrl+left=goto_split:left
+keybind = super+ctrl+right=goto_split:right
+keybind = super+ctrl+up=goto_split:top
+keybind = super+ctrl+down=goto_split:bottom
+keybind = super+ctrl+w=close_surface
+#theme = Argonaut
+#theme = ayu
+theme = niji
+#theme = Raycast_Dark
+
+#
+# Key reference defaults
+#
+# To view default config:  ghostty +show-config --default | less
+# Add to command to see docs:  --docs
+#
+# keybind = ctrl+shift+comma=reload_config
+# keybind = ctrl+enter=toggle_fullscreen
+# keybind = super+ctrl+right_bracket=goto_split:next
+# keybind = super+ctrl+left_bracket=goto_split:previous
+# keybind = super+ctrl+shift+left=resize_split:left,10
+# keybind = super+ctrl+shift+right=resize_split:right,10
+# keybind = super+ctrl+shift+up=resize_split:up,10
+# keybind = super+ctrl+shift+down=resize_split:down,10
+
