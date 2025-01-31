@@ -1,6 +1,6 @@
 # Debian/Ubuntu Linux Environment Setup
 
-For Ubuntu laptops, [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers), [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), and Chromebook.
+For Ubuntu laptops, [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers), [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), and Chromebooks.
 
 ## Copy Repo
 
@@ -12,16 +12,19 @@ git clone https://github.com/pkdone/dotfiles.git
 
 ```console
 cp dotfiles/bash_aliases ~/.bash_aliases
+mkdir -p ~/.config/fish
 cp dotfiles/config.fish ~/.config/fish/config.fish
+mkdir -p ~/.config/ghostty
 cp dotfiles/config.ghostty ~/.config/ghostty/config
 # TODO: install Ghostty
 sudo apt install -y fish
-chsh -s /usr/bin/fish
 
 if uname -n | grep -q "penguin"; then
+  sudo chsh -s /usr/bin/fish $(whoami)
   # On Chromebook, password not known so instead, need to log out of the terminal and back in again
   exit
 else
+  chsh -s /usr/bin/fish
   su - $USER
 fi
 ```
@@ -40,15 +43,15 @@ rm -f google-chrome-stable_current_amd64.deb
 sudo apt install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker (whoami)
 
-if uname -n | grep -q "penguin"; then
+if uname -n | grep -q "penguin"
   sudo apt install -y docker-compose
   printf "\nACTION: On Chromebook, the user's password is not known, so right-click (Super-<mouse-click>) the terminal's icon and select 'Shut down Linux' and then start Linux again\n\n"
 else
   sudo apt install -y docker-compose-v2
-  su - $USER
-fi
+  exec su - (whoami)
+end
 ```
 
 ```console
@@ -68,15 +71,13 @@ sudo npm install -g typescript
 ```console
 sudo apt install -y gnupg curl
 
-curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
-   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
-   --dearmor
+curl -fsSL https://pgp.mongodb.com/server-8.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg --dearmor
 
-if cat /etc/issue | grep -q "Ubuntu"; then
+if cat /etc/issue | grep -q "Ubuntu"
   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.com/apt/ubuntu noble/mongodb-enterprise/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise-8.0.list
 else
   echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] http://repo.mongodb.com/apt/debian bookworm/mongodb-enterprise/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
-fi
+end
 
 sudo apt update
 sudo apt install -y mongodb-enterprise
