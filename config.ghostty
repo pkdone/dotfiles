@@ -6,7 +6,6 @@ window-height = 60
 window-width = 90
 unfocused-split-opacity = 0.75
 unfocused-split-fill = #000000
-keybind = super+enter=toggle_window_decorations
 keybind = super+ctrl+p=new_split:right
 keybind = super+ctrl+o=new_split:down
 keybind = super+ctrl+left=goto_split:left
