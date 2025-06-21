@@ -63,7 +63,7 @@ docker ps -a
 
 ```console
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt install nodejs
+sudo apt install -y nodejs
 sudo npm install -g typescript
 ```
 
