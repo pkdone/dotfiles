@@ -24,6 +24,7 @@ theme = Ayu
 # To view default config:  ghostty +show-config --default | less
 # Add to command to see docs:  --docs
 #
+# keybind = ctrl+shift+p=toggle_command_palette
 # keybind = ctrl+shift+comma=reload_config
 # keybind = ctrl+enter=toggle_fullscreen
 # keybind = super+ctrl+right_bracket=goto_split:next
