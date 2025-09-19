@@ -14,9 +14,9 @@ keybind = super+ctrl+up=goto_split:top
 keybind = super+ctrl+down=goto_split:bottom
 keybind = super+ctrl+w=close_surface
 #theme = Argonaut
-#theme = ayu
-theme = niji
-#theme = Raycast_Dark
+theme = Ayu
+#theme = Niji
+#theme = Raycast Dark
 
 #
 # Key reference defaults
